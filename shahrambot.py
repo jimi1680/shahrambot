@@ -57,7 +57,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("❌ خطا در پاسخ‌دهی:\n" + str(e))
 
 # اجرای برنامه
-if __name__ == "main":
+if __name__ == "__main__":
     try:
         app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
         app.add_handler(CommandHandler("start", start))
